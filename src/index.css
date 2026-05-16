@@ -1646,8 +1646,55 @@ body.dark {
  }
 
  body.dark * {
-     color: #f1f1f1 !important;
+     color: #f1f1f1;
  }
+ 
+ /* 🌙 Dark Theme Styles */
+body.dark-theme {
+  background: linear-gradient(135deg, rgba(15, 15, 30, 0.95), rgba(30, 30, 45, 0.9));
+  color: white; /* default text color */
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+/* Make sections glassy */
+body.dark-theme section,
+body.dark-theme .contact-card,
+body.dark-theme .project-card,
+body.dark-theme .profile-card,
+body.dark-theme .about-container,
+body.dark-theme .box {
+  background: rgba(255, 255, 255, 0.08); /* frosted glass */
+  backdrop-filter: blur(10px); /* blur effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* neat shadow */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme li {
+  color: white !important;
+}
+
+/* Apply frosted glass only to text parts, not whole project-card */
+body.dark-theme .project-card {
+  background: transparent;  /* let the project screenshots stay normal */
+  box-shadow: none;
+}
+
+body.dark-theme .project-card .card-content {
+  background: rgba(235, 4, 4, 0.915); /* glass effect only on text area */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+}
+
+
 
  .theme-toggle-wrapper {
      position: fixed;
@@ -1821,4 +1868,11 @@ body.dark {
  }
 
  
- 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
