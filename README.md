@@ -15,8 +15,7 @@ G.V.K. Sindhu
 - **Parallax:** React Scroll Parallax
 
 ## Live URL
-*(Replace this with your deployed Vercel or Netlify link once deployed)*
-[https://your-live-url.vercel.app](https://your-live-url.vercel.app)
+[https://protofolio-mu-olive.vercel.app/](https://protofolio-mu-olive.vercel.app/)
 
 ## Features
 - Fully responsive layout (Mobile, Tablet, Desktop)
